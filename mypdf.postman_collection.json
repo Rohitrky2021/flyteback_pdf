@@ -1,0 +1,558 @@
+{
+	"info": {
+		"_postman_id": "4eddda41-a554-4336-87ff-261d8320da56",
+		"name": "mypdf",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25515567"
+	},
+	"item": [
+		{
+			"name": "DroneCRUD",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjcwODljYzZiNjQ2NTEyNGZkYmRlMzIzIn0sImlhdCI6MTcyODYxNzY3NCwiZXhwIjoxNzI4NjIxMjc0fQ.cX19NjLyZYxVPBHd65y10g-3O1OEzJDbC7scDgNzxF0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Drone A\",\r\n  \"drone_type\": \"Quadcopter\"\r\n}\r\n ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/drones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"drones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAdrone",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjcwODljYzZiNjQ2NTEyNGZkYmRlMzIzIn0sImlhdCI6MTcyODYxNzY3NCwiZXhwIjoxNzI4NjIxMjc0fQ.cX19NjLyZYxVPBHd65y10g-3O1OEzJDbC7scDgNzxF0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Updated Drone A\",\r\n  \"drone_type\": \"Hexacopter\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/drones/67089d30b6465124fdbde326",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"drones",
+								"67089d30b6465124fdbde326"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllDrones",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjcwODljYzZiNjQ2NTEyNGZkYmRlMzIzIn0sImlhdCI6MTcyODYxNzY3NCwiZXhwIjoxNzI4NjIxMjc0fQ.cX19NjLyZYxVPBHd65y10g-3O1OEzJDbC7scDgNzxF0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/drones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"drones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Drone",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjcwODljYzZiNjQ2NTEyNGZkYmRlMzIzIn0sImlhdCI6MTcyODYxNzY3NCwiZXhwIjoxNzI4NjIxMjc0fQ.cX19NjLyZYxVPBHd65y10g-3O1OEzJDbC7scDgNzxF0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/drones/67089d30b6465124fdbde326",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"drones",
+								"67089d30b6465124fdbde326"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Missions",
+			"item": [
+				{
+					"name": "FlightSimulation_log",
+					"item": [
+						{
+							"name": "StartMission",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjcwODljYzZiNjQ2NTEyNGZkYmRlMzIzIn0sImlhdCI6MTcyODYxNzY3NCwiZXhwIjoxNzI4NjIxMjc0fQ.cX19NjLyZYxVPBHd65y10g-3O1OEzJDbC7scDgNzxF0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"drone_id\": \"6708a766c4f1e29b2d636aa9\",\r\n  \"mission_id\": \"6708a64cc4f1e29b2d636aa5\"\r\n}\r\n ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/start-mission",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"start-mission"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "StopMission",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjcwODljYzZiNjQ2NTEyNGZkYmRlMzIzIn0sImlhdCI6MTcyODYxNzY3NCwiZXhwIjoxNzI4NjIxMjc0fQ.cX19NjLyZYxVPBHd65y10g-3O1OEzJDbC7scDgNzxF0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"flight_id\": \"96da5663-ba74-41da-b4fb-1eb251460646\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/stop",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"stop"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetFlight",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjcwODljYzZiNjQ2NTEyNGZkYmRlMzIzIn0sImlhdCI6MTcyODYyMjMzNCwiZXhwIjoxNzI4NjI1OTM0fQ.7S4t7PlQFaGgVipC_HZbicaFlRehk0WHFBMToO_9Fm0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "text"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/flight-log/96da5663-ba74-41da-b4fb-1eb251460646/pdf",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"flight-log",
+										"96da5663-ba74-41da-b4fb-1eb251460646",
+										"pdf"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "GetFlight",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "text"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/flight-log/96da5663-ba74-41da-b4fb-1eb251460646/pdf",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"flight-log",
+												"96da5663-ba74-41da-b4fb-1eb251460646",
+												"pdf"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express",
+											"type": "text"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/pdf",
+											"type": "text"
+										},
+										{
+											"key": "Content-Disposition",
+											"value": "attachment; filename=FlightLog-96da5663-ba74-41da-b4fb-1eb251460646.pdf",
+											"type": "text"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 11 Oct 2024 04:57:40 GMT",
+											"type": "text"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive",
+											"type": "text"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5",
+											"type": "text"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked",
+											"type": "text"
+										}
+									],
+									"cookie": [],
+									"body": "%PDF-1.3\n%����\n7 0 obj\n<<\n/Type /Page\n/Parent 1 0 R\n/MediaBox [0 0 612 792]\n/Contents 5 0 R\n/Resources 6 0 R\n>>\nendobj\n6 0 obj\n<<\n/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]\n/Font <<\n/F1 8 0 R\n>>\n>>\nendobj\n5 0 obj\n<<\n/Length 564\n/Filter /FlateDecode\n>>\nstream\nx��U=��0\u0010��+�\u000703��obi�\u0005\u0012\u0014t��\u0010ű�V\\A��G��c�\r�.�$�=����X�\u0014)o�H�n��8�\u0018t5��p�Ԣ�ڭ��J/����\u0007-&�p\u001a��<�38����'�\t�/���)�䮦��a_���\t:H��� `\u0013����\u0004��M�\"_�����0|z��)����j�{�48I�\t�F��A� \u0004��\u0016��B��W\u001c��\u0016\u000f�3�J0\u0011\u0010��H�D2J60�d�d\u0003�JE��Ǥ�q�gb�\u0004����g*'�+��\n�Vd��k�\u0016�%\u000b��\u0016�\u0004�\u0010N\rۗ7.e\u00177\u001e9��[�-��ʎ��OD�\u0007\n5�!�\u001cg�\u001e��x� \r\u000f��۷\u001c\u0001\u0010\u0013\u001b�sfb��FamD�5�O����]5���&��(\u0013�m�u��*Ǘ;�-���6�,���\u001d�o��2V'��m��j���|_��=(\u0001�&�K���\r?\u0014\u0000l��CA��\u001f�b�y�L�^8[X`E��\u0010V Z-��8�K5�����\u0017��n�W��\"&�%\u000f\t����!<�s\u000e\u000f��M�y�:�\u0005%=2���w�x(�J�Ύ�M��G\u001a@،�0�~��\u0019׊l�0������K����>Y#�t#�bJ����<,�(�%3�Wj^��\u000b\u001c\u0019�U[��W��*\u0017��UW��\u0002�h��\nendstream\nendobj\n10 0 obj\n(PDFKit)\nendobj\n11 0 obj\n(PDFKit)\nendobj\n12 0 obj\n(D:20241011045740Z)\nendobj\n9 0 obj\n<<\n/Producer 10 0 R\n/Creator 11 0 R\n/CreationDate 12 0 R\n>>\nendobj\n8 0 obj\n<<\n/Type /Font\n/BaseFont /Helvetica\n/Subtype /Type1\n/Encoding /WinAnsiEncoding\n>>\nendobj\n4 0 obj\n<<\n>>\nendobj\n3 0 obj\n<<\n/Type /Catalog\n/Pages 1 0 R\n/Names 2 0 R\n>>\nendobj\n1 0 obj\n<<\n/Type /Pages\n/Count 1\n/Kids [7 0 R]\n>>\nendobj\n2 0 obj\n<<\n/Dests <<\n  /Names [\n]\n>>\n>>\nendobj\nxref\n0 13\n0000000000 65535 f \n0000001185 00000 n \n0000001242 00000 n \n0000001123 00000 n \n0000001102 00000 n \n0000000208 00000 n \n0000000119 00000 n \n0000000015 00000 n \n0000001005 00000 n \n0000000930 00000 n \n0000000844 00000 n \n0000000869 00000 n \n0000000894 00000 n \ntrailer\n<<\n/Size 13\n/Root 3 0 R\n/Info 9 0 R\n/ID [<d25dbec2816f20b94d140751a5412525> <d25dbec2816f20b94d140751a5412525>]\n>>\nstartxref\n1289\n%%EOF\n"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjcwODljYzZiNjQ2NTEyNGZkYmRlMzIzIn0sImlhdCI6MTcyODYxNzY3NCwiZXhwIjoxNzI4NjIxMjc0fQ.cX19NjLyZYxVPBHd65y10g-3O1OEzJDbC7scDgNzxF0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Mission 1\",\r\n  \"alt\": 100,\r\n  \"speed\": 10,\r\n  \"waypoints\": [\r\n    { \"lat\": 37.7749, \"lng\": -122.4194, \"alt\": 120 },\r\n    { \"lat\": 37.7740, \"lng\": -122.4184, \"alt\": 110 }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/missions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"missions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjcwODljYzZiNjQ2NTEyNGZkYmRlMzIzIn0sImlhdCI6MTcyODYxNzY3NCwiZXhwIjoxNzI4NjIxMjc0fQ.cX19NjLyZYxVPBHd65y10g-3O1OEzJDbC7scDgNzxF0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/missions/6708a41f0a615c11e79cc5f5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"missions",
+								"6708a41f0a615c11e79cc5f5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetallMissions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjcwODljYzZiNjQ2NTEyNGZkYmRlMzIzIn0sImlhdCI6MTcyODYxNzY3NCwiZXhwIjoxNzI4NjIxMjc0fQ.cX19NjLyZYxVPBHd65y10g-3O1OEzJDbC7scDgNzxF0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/missions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"missions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateMiss",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjcwODljYzZiNjQ2NTEyNGZkYmRlMzIzIn0sImlhdCI6MTcyODYxNzY3NCwiZXhwIjoxNzI4NjIxMjc0fQ.cX19NjLyZYxVPBHd65y10g-3O1OEzJDbC7scDgNzxF0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Updated Mission 1\",\r\n  \"alt\": 150,\r\n  \"speed\": 20\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/missions/6708a41f0a615c11e79cc5f5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"missions",
+								"6708a41f0a615c11e79cc5f5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"testuser\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"testuser\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
