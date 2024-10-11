@@ -9,10 +9,10 @@ const app = express();
 app.use(bodyParser.json());
 
 
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log('MongoDB connection error:', err));
-
+ 
 // Serve the 'pdfs' directory as static files
 app.use('/pdfs', express.static(path.join(__dirname, 'pdfs')));
 
