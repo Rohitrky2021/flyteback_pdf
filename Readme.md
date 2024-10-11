@@ -43,7 +43,7 @@ npm start
 
 
 The project is organized as follows:
-
+```
 .
 ├── app.js                  # Main application setup
 ├── server.js               # Server initialization
@@ -62,7 +62,7 @@ The project is organized as follows:
 │   ├── Mission.js           # Mission model
 │   └── User.js              # User model
 └── pdfs                     # Directory for generated PDF files
-
+```
 # API Endpoints
 
 ## User
