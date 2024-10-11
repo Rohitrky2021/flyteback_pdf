@@ -11,6 +11,9 @@ Flyteback is a drone mission management system that enables users to register, l
 - **Mission Management:** Create, read, update, and delete missions.
 - **Mission Simulation:** Start and stop drone missions to simulate flights.
 - **PDF Generation:** Generate and download PDF flight logs for completed missions.
+![pdf 1](image.png)
+![API Endpoints](im2.png)
+
 
 ## Prerequisites
 
